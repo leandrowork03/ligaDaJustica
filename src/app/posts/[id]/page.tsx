@@ -1,15 +1,18 @@
-import { PostInfo } from "./components/post";
+// src/app/posts/[id]/page.tsx
+import { Metadata } from 'next'
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  return {
+    title: `Post ${params.id}`,
+  }
+}
 
-export default async function DetailPost({ params }: PageProps) {
+export default async function DetailPost({ params }: { params: { id: string } }) {
+  const { id } = params
+
   return (
-    <main>
-      <PostInfo id={params.id} />
-    </main>
-  );
+    <div>
+      <h1>Detalhes do post {id}</h1>
+    </div>
+  )
 }

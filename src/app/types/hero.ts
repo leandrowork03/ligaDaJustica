@@ -1,3 +1,5 @@
+// src/types/hero.ts
+
 export interface Hero {
   id: number;
   nome: string;
@@ -6,3 +8,11 @@ export interface Hero {
     img2: string;
   };
 }
+
+// 👇 Adiciona essa tipagem no mesmo arquivo
+export type PostPageProps = {
+  params: {
+    id: string;
+  };
+};
+
