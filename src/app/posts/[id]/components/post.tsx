@@ -30,3 +30,6 @@ export function PostInfo({ id }: { id: string }) {
     </main>
   );
 }
+
+
+

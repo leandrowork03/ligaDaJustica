@@ -11,6 +11,12 @@ import { Hero } from "@/app/types/hero";
 
 export default function FancySlider() {
   const [heroes, setHeroes] = useState<Hero[]>([]);
+  const [showFlash, setShowFlash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowFlash(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     fetch("/api/heroes")
@@ -19,11 +25,19 @@ export default function FancySlider() {
       .catch(console.error);
   }, []);
 
-  if (heroes.length === 0) {
+  if (showFlash) {
     return (
       <div className="h-screen w-full flex flex-col items-center justify-center gap-4">
         <img src={flash.src} alt="flash" className="w-62 h-62 object-contain" />
-        <h1 className="text-2xl font-semibold">Carregando...</h1>
+        <h1 className="text-center text-sm sm:text-2xl font-semibold">Meu nome é Barry Allen e eu sou o homem mais rápido do mundo!</h1>
+      </div>
+    );
+  }
+
+  if (heroes.length === 0) {
+    return (
+      <div className="h-screen w-full flex flex-col items-center justify-center gap-4">
+        <h1 className="text-2xl font-semibold">Carregando heróis...</h1>
       </div>
     );
   }
@@ -66,4 +80,3 @@ export default function FancySlider() {
     </div>
   );
 }
-

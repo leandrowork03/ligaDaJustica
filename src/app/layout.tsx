@@ -19,6 +19,7 @@ export default function RootLayout({
       <body className={`antialiased ${monoton.variable}`}>
         <Header />
         {children}
+        
       </body>
     </html>
   );

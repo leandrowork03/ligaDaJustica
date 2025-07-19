@@ -32,7 +32,7 @@ export function Header() {
   return (
     <header className="bg-blue-500 py-3 shadow-md relative z-50">
       <nav className="max-w-7xl mx-auto flex justify-between items-center px-4">
-        {/* Logo da esquerda */}
+        
         <Link href="/">
           <img src={lj.src} alt="logo" className="w-16 h-12 cursor-pointer" />
         </Link>

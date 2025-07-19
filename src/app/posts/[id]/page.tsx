@@ -1,5 +1,5 @@
-// src/app/posts/[id]/page.tsx
 import { Metadata } from 'next'
+import { PostInfo } from './components/post';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   return {
@@ -12,7 +12,7 @@ export default async function DetailPost({ params }: { params: { id: string } })
 
   return (
     <div>
-      <h1>Detalhes do post {id}</h1>
+      <PostInfo id={id} />
     </div>
   );
 }
