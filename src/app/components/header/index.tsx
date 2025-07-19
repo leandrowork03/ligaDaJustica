@@ -10,7 +10,7 @@ export function Header(){
         <header className='bg-blue-500 h-15'>
             <nav className='max-w-7xl mx-auto flex justify-between items-center'>
                   
-                    <img src={lj.src} alt="logo" className='w-15 h-12 '/>
+                    <Link href='/'><img src={lj.src} alt="logo" className='w-15 h-12 '/></Link>
                     
                     <img src={jl.src} alt="icon" className='w-15'/>
 

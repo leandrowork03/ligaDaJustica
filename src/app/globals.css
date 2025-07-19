@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ⚡️ EFEITO ANIMADO NO FUNDO - VISUAL INSANO */
+/*  EFEITO ANIMADO */
 body::before {
   content: "";
   position: fixed;
