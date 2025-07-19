@@ -8,11 +8,11 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 }
 
 export default async function DetailPost({ params }: { params: { id: string } }) {
-  const { id } = params
+  const { id } = params;
 
   return (
     <div>
       <h1>Detalhes do post {id}</h1>
     </div>
-  )
+  );
 }
