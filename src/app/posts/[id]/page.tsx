@@ -1,6 +1,12 @@
 import { PostInfo } from "./components/post";
 
-export default function DetailPost({ params }: { params: { id: string } }) {
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default function DetailPost({ params }: PageProps) {
   return (
     <main>
       <PostInfo id={params.id} />
