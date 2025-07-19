@@ -6,7 +6,7 @@ type PageProps = {
   };
 };
 
-export default function DetailPost({ params }: PageProps) {
+export default async function DetailPost({ params }: PageProps) {
   return (
     <main>
       <PostInfo id={params.id} />
