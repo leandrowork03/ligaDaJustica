@@ -20,7 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-/*  EFEITO ANIMADO */
 body::before {
   content: "";
   position: fixed;
@@ -47,4 +46,18 @@ body::before {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@keyframes pulse-shadow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-shadow 1.5s ease-in-out infinite;
 }

@@ -4,9 +4,8 @@ import { Names } from "./components/names";
 export default function Home() {
   return (
     <>
-   <FancySlider/>
-    <Names/>
+      <FancySlider />
+      <Names />
     </>
   );
 }
-

@@ -1,12 +1,12 @@
 import { Header } from "./components/header";
 import "./globals.css";
 
-import { Monoton } from 'next/font/google';
+import { Monoton } from "next/font/google";
 
 const monoton = Monoton({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-monoton',
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-monoton",
 });
 
 export default function RootLayout({
